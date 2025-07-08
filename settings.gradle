@@ -10,6 +10,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        // PERBAIKAN: Tambahkan baris ini untuk memberitahu Gradle
+        // agar mencari library di repositori JitPack.
+        maven { url 'https://jitpack.io' }
     }
 }
 rootProject.name = "Concentrack"
