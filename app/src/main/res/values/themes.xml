@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <!--
-      PERBAIKAN:
-      Mengubah parent dari "android:Theme.Material.Light.NoActionBar"
-      menjadi "Theme.Material3.DayNight.NoActionBar" atau "Theme.AppCompat.DayNight.NoActionBar".
-      Ini wajib karena MainActivity Anda adalah turunan dari AppCompatActivity.
-    -->
-    <style name="Theme.Concentrack" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Anda bisa menambahkan kustomisasi warna di sini jika perlu -->
-        <!-- Contoh:
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Concentrack" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
-        -->
     </style>
-
+    <style name="MyToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+    </style>
 </resources>
