@@ -26,29 +26,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Concentrack"
         tools:targetApi="31">
-
+        <activity
+            android:name=".TipsActivity"
+            android:exported="false" />
         <activity
             android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Concentrack">
-        </activity>
+            android:theme="@style/Theme.Concentrack"></activity>
         <activity
             android:name=".InfoActivity"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Concentrack">
-        </activity>
-
+            android:theme="@style/Theme.Concentrack"></activity>
     </application>
 
 </manifest>

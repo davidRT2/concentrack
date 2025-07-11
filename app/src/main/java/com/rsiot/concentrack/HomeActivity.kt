@@ -34,7 +34,11 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_item_2 -> {
-                    val intent = Intent(this, InfoActivity::class.java)
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    true
+                }R.id.nav_item_3 -> {
+                    val intent = Intent(this, TipsActivity::class.java)
                     startActivity(intent)
                     true
                 }
