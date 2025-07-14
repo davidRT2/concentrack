@@ -163,7 +163,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="#7986CB"
-        app:itemIconTint="@color/white"
-        app:itemIconSize="24dp"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
         app:menu="@menu/botton_nav_menu" />
 </RelativeLayout>

@@ -27,6 +27,9 @@
         android:theme="@style/Theme.Concentrack"
         tools:targetApi="31">
         <activity
+            android:name=".ConnectActivity"
+            android:exported="false" />
+        <activity
             android:name=".TipsActivity"
             android:exported="false" />
         <activity
@@ -42,12 +45,15 @@
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Concentrack"></activity>
+            android:theme="@style/Theme.Concentrack" />
         <activity
             android:name=".InfoActivity"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Concentrack"></activity>
+            android:theme="@style/Theme.Concentrack" />
+        <activity
+            android:name=".MonitoringActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

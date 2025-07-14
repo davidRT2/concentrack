@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8EAF6"
+    tools:context=".MonitoringActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_monitoring"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#7986CB"
+            app:title="Monitoring"
+            app:titleTextColor="@color/white"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/tv_visualisasi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appBarLayout"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Visualisasi Brainwave"
+        android:textColor="#3F51B5"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view_brainwave_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/tv_visualisasi_title"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_background"
+        android:backgroundTint="#DCDFE8" />
+
+    <TextView
+        android:id="@+id/tv_keterangan_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_brainwave_placeholder"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Keterangan :"
+        android:textColor="#3F51B5"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_keterangan_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_keterangan_label"
+        android:layout_alignStart="@id/tv_keterangan_label"
+        android:layout_marginTop="4dp"
+        android:text="-"
+        android:textColor="#5C6BC0" />
+
+    <TextView
+        android:id="@+id/tv_durasi_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_brainwave_placeholder"
+        android:layout_alignEnd="@id/view_brainwave_placeholder"
+        android:layout_marginTop="24dp"
+        android:text="Durasi"
+        android:textColor="#3F51B5"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_durasi_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_durasi_label"
+        android:layout_alignEnd="@id/tv_durasi_label"
+        android:layout_marginTop="4dp"
+        android:text="00:00:00"
+        android:textColor="#5C6BC0" />
+
+    <Button
+        android:id="@+id/btn_mulai_monitoring"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_keterangan_value"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#B0BEC5"
+        android:paddingHorizontal="32dp"
+        android:text="Mulai monitoring"
+        android:textAllCaps="false"
+        android:textColor="#37474F" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/botton_nav_menu"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        android:background="#7986CB"/>
+
+</RelativeLayout>

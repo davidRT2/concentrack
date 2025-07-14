@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#F5F5F5"
     tools:context=".TipsActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <androidx.appcompat.widget.Toolbar
@@ -24,9 +24,22 @@
         android:id="@+id/rv_tips"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/appBarLayout"
+        android:layout_above="@+id/bottomNavigationView"
         android:clipToPadding="false"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
-        tools:listitem="@layout/item_tip"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
-</LinearLayout>
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_tip" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#7986CB"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:menu="@menu/botton_nav_menu" />
+
+</RelativeLayout>
