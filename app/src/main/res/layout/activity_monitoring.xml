@@ -32,15 +32,14 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <View
+    <!-- PERUBAHAN: Mengganti <View> dengan <LineChart> -->
+    <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/view_brainwave_placeholder"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_below="@id/tv_visualisasi_title"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rounded_background"
-        android:backgroundTint="#DCDFE8" />
+        android:layout_marginTop="8dp" />
 
     <TextView
         android:id="@+id/tv_keterangan_label"
@@ -81,7 +80,7 @@
         android:layout_below="@id/tv_durasi_label"
         android:layout_alignEnd="@id/tv_durasi_label"
         android:layout_marginTop="4dp"
-        android:text="00:00:00"
+        android:text="05:00"
         android:textColor="#5C6BC0" />
 
     <Button

@@ -7,7 +7,7 @@
     android:background="#E8EAF6"
     tools:context=".HomeActivity">
 
-    <!-- Toolbar ini sudah benar, ID-nya "@+id/toolbar" akan digunakan oleh HomeActivity.kt -->
+    <!-- Toolbar -->
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -52,6 +52,7 @@
                 android:textSize="16sp"
                 android:layout_marginBottom="24dp"/>
 
+            <!-- Card Monitoring -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
@@ -100,11 +101,15 @@
                             android:background="@drawable/rounded_background"
                             android:text="Monitoring sekarang"
                             android:textAllCaps="false"
-                            android:textColor="#ffff"/>
+                            android:textColor="#ffff"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:outlineProvider="background" />
+                        <!-- outlineProvider ditambahkan untuk menyesuaikan bentuk ripple -->
                     </LinearLayout>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
+            <!-- Card Tips -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
@@ -150,13 +155,17 @@
                             android:background="@drawable/rounded_background"
                             android:text="Lihat selengkapnya"
                             android:textAllCaps="false"
-                            android:textColor="#ffff"/>
+                            android:textColor="#ffff"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:outlineProvider="background" />
+                        <!-- outlineProvider ditambahkan untuk menyesuaikan bentuk ripple -->
                     </LinearLayout>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </ScrollView>
 
+    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"

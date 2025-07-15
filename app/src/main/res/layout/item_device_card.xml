@@ -6,7 +6,10 @@
     android:layout_weight="1"
     android:layout_margin="8dp"
     app:cardCornerRadius="16dp"
-    app:cardElevation="2dp">
+    app:cardElevation="2dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -27,16 +30,15 @@
             android:layout_height="20dp"
             android:layout_alignParentEnd="true"
             android:src="@drawable/ic_checkmark_circle"
-            app:tint="#4CAF50" />
-
-        <ImageView
-            android:id="@+id/iv_device_image"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_below="@id/tv_device_name"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/muse2" />
+            app:tint="#4CAF50"
+            android:visibility="gone" /> <ImageView
+        android:id="@+id/iv_device_image"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/tv_device_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/muse2" />
 
         <TextView
             android:id="@+id/tv_connection_status"
@@ -50,6 +52,6 @@
             android:padding="8dp"
             android:text="Connected"
             android:textColor="@color/white"
-            android:textSize="12sp" />
-    </RelativeLayout>
+            android:textSize="12sp"
+            android:visibility="gone" /> </RelativeLayout>
 </androidx.cardview.widget.CardView>
